@@ -1,10 +1,12 @@
 import { Separator } from "@/components/ui/separator";
 import { About } from "@/components/about/About";
-import { ArticleList } from "@/components/articles/ArticleList";
-import { ExperienceList } from "@/components/experience/ExperienceList";
+// ArticleList is temporarily deprecated but components are kept
+// import { ArticleList } from "@/components/articles/ArticleList";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Contact } from "@/components/contact/Contact";
+import { TimelineExperience } from "@/components/experience/TimelineExperience";
+import { ProjectsSection } from "@/components/projects/ProjectsSection";
 
 export default function App() {
   return (
@@ -23,13 +25,13 @@ export default function App() {
         
         <Separator className="bg-primary/10" />
         
-        {/* Articles Section */}
-        <ArticleList />
+        {/* Projects Section */}
+        <ProjectsSection />
         
         <Separator className="bg-primary/10" />
         
-        {/* Work Experience Section */}
-        <ExperienceList />
+        {/* Work Experience Section with Timeline */}
+        <TimelineExperience />
         
         <Separator className="bg-primary/10" />
         

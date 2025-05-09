@@ -39,9 +39,9 @@ export function Header() {
             variant="ghost" 
             size="sm" 
             className="hover:bg-primary/10 hover:text-primary"
-            onClick={() => scrollToSection('blog')}
+            onClick={() => scrollToSection('projects')}
           >
-            Blog
+            Projects
           </Button>
           <Button 
             variant="ghost" 
@@ -110,9 +110,9 @@ export function Header() {
               variant="ghost" 
               size="sm" 
               className="w-full justify-start hover:bg-primary/10 hover:text-primary"
-              onClick={() => scrollToSection('blog')}
+              onClick={() => scrollToSection('projects')}
             >
-              Blog
+              Projects
             </Button>
             <Button 
               variant="ghost" 

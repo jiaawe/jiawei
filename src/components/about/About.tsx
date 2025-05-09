@@ -1,8 +1,5 @@
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ContactDetails } from "./ContactDetails";
 import { aboutData, skills } from "@/data/about";
 import profileImage from "../../assets/me.jpg";
 
@@ -39,19 +36,6 @@ export function About() {
             ))}
           </div>
         </div>
-      </div>
-      
-      <div className="space-y-4">
-        <Alert className="bg-card/80 backdrop-blur-sm border-primary/30 shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-            <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
-          </svg>
-          <AlertDescription>
-            Looking for my resume? <Button variant="link" className="h-auto p-0 text-primary hover:text-primary/80">Download PDF</Button>
-          </AlertDescription>
-        </Alert>
-        
-        <ContactDetails />
       </div>
     </section>
   );
