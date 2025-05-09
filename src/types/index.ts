@@ -23,6 +23,7 @@ export interface Experience {
   role: string;
   period: string;
   description: string;
+  bullets: string[]; // Added bullets array for bullet points
 }
 
 export interface Project {
@@ -32,7 +33,8 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   demoUrl?: string;
-  imageUrl?: string;
+  imageUrl: string; // Now required for all projects
+  pdfUrl?: string; // Added for project reports/PDFs
   featured: boolean;
 }
 

@@ -45,20 +45,36 @@ export function TimelineExperience() {
                   {exp.period}
                 </Badge>
               </div>
-              <p className="text-foreground/90">{exp.description}</p>
+              
+              {/* Bullet points */}
+              <ul className="list-disc pl-5 space-y-1 mt-2">
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i} className="text-foreground/90">{bullet}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}
         
-        {!showAllExperiences && experiences.length > 2 && (
+        {experiences.length > 2 && (
           <div className="text-center relative z-10 pt-2">
-            <Button 
-              variant="outline" 
-              onClick={() => setShowAllExperiences(true)}
-              className="border-primary/30 hover:bg-primary/10"
-            >
-              Show More
-            </Button>
+            {!showAllExperiences ? (
+              <Button 
+                variant="outline" 
+                onClick={() => setShowAllExperiences(true)}
+                className="border-primary/30 hover:bg-primary/10"
+              >
+                Show More
+              </Button>
+            ) : (
+              <Button 
+                variant="outline" 
+                onClick={() => setShowAllExperiences(false)}
+                className="border-primary/30 hover:bg-primary/10"
+              >
+                Show Less
+              </Button>
+            )}
           </div>
         )}
       </div>

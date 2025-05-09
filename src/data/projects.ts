@@ -3,55 +3,24 @@ import type { Project, Publication } from "../types";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Real-time Risk Control System",
-    description: "Developed an address clustering system to identify and flag risky transactions in real-time. The system processes over 2,500 transactions daily with high accuracy.",
-    technologies: ["Python", "PyTorch", "Elasticsearch", "Docker", "Kafka"],
-    githubUrl: "https://github.com/jiaawe/risk-control-system",
+    title: "Enhancing Sports Strategy with Video Analytics and Data Mining",
+    description: "My project introduces a comprehensive video-based analytics framework for tennis doubles, featuring a standardised annotation methodology and specialised annotation tool. The tool in semi-automated, integrating advanced machine learning techniques like GroundingDINO for player localisation and YOLO-Pose for pose estimation as part of a two-stage inference process, significantly reducing manual annotation efforts. Experimental results showed CNN-based models with transfer learning outperformed pose-based approaches in predicting shot types, player positioning, and formations, creating a foundation for future strategic tennis analytics.",
+    technologies: ["React", "Flask", "FFmpeg", "PyTorch", "GroundingDINO", "YOLO-Pose", "GCN", "CNN", "Transfer Learning"],
+    githubUrl: "https://github.com/jiaawe/tennis-prediction",
+    pdfUrl: "https://drive.google.com/file/d/1769hAjnJj3i3hTJpe_0buXBS8aJXEJ2V/view?usp=sharing",
+    imageUrl: "tennis-annotation-framework", // This is now just an identifier, actual path handled in ProjectCard
     featured: true
-  },
-  {
-    id: 2,
-    title: "Retrieval Augmented Generation Pipeline",
-    description: "Built a RAG pipeline for video retrieval with over 95% accuracy and response times under 3 seconds. Optimized inference speeds by 30% using open-source frameworks.",
-    technologies: ["Python", "LangChain", "FAISS", "PyTorch", "Hugging Face"],
-    demoUrl: "https://rag-demo.jiaawe.com",
-    featured: true
-  },
-  {
-    id: 3,
-    title: "Dataset Distillation Framework",
-    description: "Implemented a framework for distilling large datasets to reduce training time and costs by more than 50%, while maintaining model performance.",
-    technologies: ["Python", "PyTorch", "AWS", "Kubernetes"],
-    githubUrl: "https://github.com/jiaawe/dataset-distillation",
-    featured: true
-  },
-  {
-    id: 4,
-    title: "Sentiment Analysis Pipeline",
-    description: "Automated quarterly survey sentiment analysis for employee feedback, saving over 70% of manual processing hours.",
-    technologies: ["Python", "NLTK", "SpaCy", "pandas", "scikit-learn"],
-    githubUrl: "https://github.com/jiaawe/sentiment-analysis",
-    featured: false
   }
 ];
 
 export const publications: Publication[] = [
   {
     id: 1,
-    title: "Efficient Video Retrieval Using Multimodal Encoders",
-    authors: ["Chen Jia Wei", "Jane Smith", "John Doe"],
-    conference: "Conference on Computer Vision and Pattern Recognition (CVPR)",
+    title: "Modeling Formation Strategies in Tennis Doubles Games",
+    authors: ["Zhaoyu Liu", "Chen Dong", "Jia Wei Chen", "Alvin Min Jun Jiang", "Guanzhou Chen", "Aayan Faraz Shaikh", "Tian Yu Dong", "Chen Wang", "Kan Jiang", "Jin Song Dong"],
+    journal: "SN Computer Science",
     year: 2024,
-    abstract: "In this paper, we propose a novel approach to efficient video retrieval using multimodal encoders. Our method achieves state-of-the-art performance on benchmark datasets while reducing computational requirements.",
-    link: "https://arxiv.org/abs/2404.12345"
-  },
-  {
-    id: 2,
-    title: "Accelerating Machine Learning Workflows through Dataset Distillation",
-    authors: ["Chen Jia Wei", "Alice Johnson"],
-    journal: "Journal of Machine Learning Research",
-    year: 2023,
-    abstract: "This research introduces new techniques for dataset distillation that significantly reduce training time and computational resources without compromising model accuracy.",
-    link: "https://jmlr.org/papers/v24/23-0123.html"
+    abstract: "In the dynamic and strategic environment of tennis doubles games, understanding the multifaceted interactions between players is crucial for enhancing team performance. In our previous work, we introduced a novel analytical framework for tennis doubles, employing Markov Decision Processes (MDP) and probabilistic model checking (PMC) to model the intricate behaviors and interactions in the doubles game. Our previous model only considered the standard standing formation. However, in the professional and NCAA Division 1 doubles matches, the \"I\" formation is utilized very often but was missing from our previous work. In this paper, we aim to extend our previous model with different formations and discuss the effectiveness of various formation strategies.",
+    link: "https://link.springer.com/article/10.1007/s42979-024-03598-3"
   }
 ];

@@ -7,9 +7,6 @@ import { PublicationCard } from "./PublicationCard";
 export function ProjectsSection() {
   const [activeTab, setActiveTab] = useState<'projects' | 'publications'>('projects');
   
-  // Filter featured projects for initial display
-  const featuredProjects = projects.filter(project => project.featured);
-  
   return (
     <section id="projects" className="space-y-6">
       <div className="flex justify-between items-center">
@@ -38,8 +35,8 @@ export function ProjectsSection() {
       </div>
       
       {activeTab === 'projects' ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {featuredProjects.map(project => (
+        <div className="grid grid-cols-1 gap-6">
+          {projects.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
