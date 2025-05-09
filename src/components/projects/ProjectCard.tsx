@@ -2,7 +2,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Project } from "@/types";
+
 import tennisImage from "../../assets/projects/sports_analytics/Tennis Annotation Framework.png";
+import intersectionGPTImage from "../../assets/projects/intersectiongpt/image.png";
+import kuaishouImage from "../../assets/projects/kuaishou/image.png";
+import deepfake from "../../assets/projects/deepfake/image.png";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,6 +16,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
   // Use a mapping for project images for flexibility
   const projectImages: Record<number, string> = {
     1: tennisImage,
+    2: intersectionGPTImage,
+    3: kuaishouImage,
+    4: deepfake,
   };
 
   return (
@@ -29,13 +36,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       )}
       
-      <CardHeader className="pb-4">
+      <CardHeader className="pb-2"> {/* Changed from pb-4 to pb-2 to reduce spacing */}
         <CardTitle className="text-xl group-hover:text-primary transition-colors">
           {project.title}
         </CardTitle>
       </CardHeader>
       
-      <CardContent className="py-0 flex-grow">
+      <CardContent className="pt-0 pb-2 flex-grow"> {/* Changed from py-0 to pt-0 pb-2 */}
         <p className="mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map(tech => (
