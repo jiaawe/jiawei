@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Enhancing Sports Strategy with Video Analytics and Data Mining",
-    description: "My project introduces a comprehensive video-based analytics framework for tennis doubles, featuring a standardised annotation methodology and specialised annotation tool. The tool in semi-automated, integrating advanced machine learning techniques like GroundingDINO for player localisation and YOLO-Pose for pose estimation as part of a two-stage inference process, significantly reducing manual annotation efforts. Experimental results showed CNN-based models with transfer learning outperformed pose-based approaches in predicting shot types, player positioning, and formations, creating a foundation for future strategic tennis analytics.",
+    description: "In my final-year project, I introduced a comprehensive video-based analytics framework for tennis doubles, featuring a standardised annotation methodology and specialised annotation tool. The tool is semi-automated, integrating advanced machine learning techniques like GroundingDINO for player localisation and YOLO-Pose for pose estimation as part of a two-stage inference process, significantly reducing manual annotation efforts. Experimental results showed CNN-based models with transfer learning outperformed pose-based approaches in predicting shot types, player positioning, and formations, creating a foundation for future strategic tennis analytics.",
     technologies: ["React", "Flask", "FFmpeg", "PyTorch", "GroundingDINO", "YOLO-Pose", "GCN", "CNN", "Transfer Learning"],
     githubUrl: "https://github.com/jiaawe/tennis-prediction",
     pdfUrl: "https://drive.google.com/file/d/1769hAjnJj3i3hTJpe_0buXBS8aJXEJ2V/view?usp=sharing",
