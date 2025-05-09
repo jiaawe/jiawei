@@ -4,19 +4,20 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ContactDetails } from "./ContactDetails";
 import { aboutData, skills } from "@/data/about";
+import profileImage from "../../assets/me.jpg";
 
 export function About() {
   return (
-    <section id="about" className="space-y-6">
+    <section id="about" className="space-y-5">
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-        <Avatar className="w-24 h-24 border-4 border-primary/60 ring-4 ring-primary/20 shadow-lg">
-          <AvatarImage src="/src/assets/me.jpg" alt={aboutData.name} />
+        <Avatar className="w-32 h-32 sm:w-40 sm:h-40 border-4 border-primary/60 ring-4 ring-primary/20 shadow-lg self-center sm:self-start">
+          <AvatarImage src={profileImage} alt={aboutData.name} />
           <AvatarFallback className="text-3xl bg-gradient-to-br from-primary via-primary/90 to-accent text-primary-foreground">
             {aboutData.name.split(' ').map(n => n[0]).join('')}
           </AvatarFallback>
         </Avatar>
         
-        <div className="space-y-3 text-center sm:text-left">
+        <div className="space-y-4 text-center sm:text-left flex-1">
           <div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent">
               {aboutData.name}
@@ -40,16 +41,18 @@ export function About() {
         </div>
       </div>
       
-      <Alert className="mb-4 bg-card/80 backdrop-blur-sm border-primary/30 shadow-sm">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-          <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
-        </svg>
-        <AlertDescription>
-          Looking for my resume? <Button variant="link" className="h-auto p-0 text-primary hover:text-primary/80">Download PDF</Button>
-        </AlertDescription>
-      </Alert>
-      
-      <ContactDetails />
+      <div className="space-y-4">
+        <Alert className="bg-card/80 backdrop-blur-sm border-primary/30 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+            <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+          </svg>
+          <AlertDescription>
+            Looking for my resume? <Button variant="link" className="h-auto p-0 text-primary hover:text-primary/80">Download PDF</Button>
+          </AlertDescription>
+        </Alert>
+        
+        <ContactDetails />
+      </div>
     </section>
   );
 }

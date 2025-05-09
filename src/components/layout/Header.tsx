@@ -9,6 +9,14 @@ export function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header className="py-6 px-4 sm:px-6 lg:px-8 bg-card/80 backdrop-blur-sm border-b border-primary/10 sticky top-0 z-50 shadow-sm">
@@ -19,10 +27,38 @@ export function Header() {
         
         {/* Desktop navigation */}
         <nav className="hidden sm:flex items-center space-x-4">
-          <a href="#about"><Button variant="ghost" size="sm" className="hover:bg-primary/10 hover:text-primary">About</Button></a>
-          <a href="#blog"><Button variant="ghost" size="sm" className="hover:bg-primary/10 hover:text-primary">Blog</Button></a>
-          <a href="#experience"><Button variant="ghost" size="sm" className="hover:bg-primary/10 hover:text-primary">Experience</Button></a>
-          <a href="#contact"><Button variant="ghost" size="sm" className="hover:bg-primary/10 hover:text-primary">Contact</Button></a>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="hover:bg-primary/10 hover:text-primary"
+            onClick={() => scrollToSection('about')}
+          >
+            About
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="hover:bg-primary/10 hover:text-primary"
+            onClick={() => scrollToSection('blog')}
+          >
+            Blog
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="hover:bg-primary/10 hover:text-primary"
+            onClick={() => scrollToSection('experience')}
+          >
+            Experience
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="hover:bg-primary/10 hover:text-primary"
+            onClick={() => scrollToSection('contact')}
+          >
+            Contact
+          </Button>
           <ThemeToggle />
         </nav>
         
@@ -62,10 +98,38 @@ export function Header() {
       {isMenuOpen && (
         <div className="sm:hidden py-4 px-4 mt-4 bg-card/90 backdrop-blur-md rounded-lg shadow-lg border border-primary/10">
           <nav className="flex flex-col space-y-2">
-            <a href="#about" onClick={toggleMenu}><Button variant="ghost" size="sm" className="w-full justify-start hover:bg-primary/10 hover:text-primary">About</Button></a>
-            <a href="#blog" onClick={toggleMenu}><Button variant="ghost" size="sm" className="w-full justify-start hover:bg-primary/10 hover:text-primary">Blog</Button></a>
-            <a href="#experience" onClick={toggleMenu}><Button variant="ghost" size="sm" className="w-full justify-start hover:bg-primary/10 hover:text-primary">Experience</Button></a>
-            <a href="#contact" onClick={toggleMenu}><Button variant="ghost" size="sm" className="w-full justify-start hover:bg-primary/10 hover:text-primary">Contact</Button></a>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="w-full justify-start hover:bg-primary/10 hover:text-primary"
+              onClick={() => scrollToSection('about')}
+            >
+              About
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="w-full justify-start hover:bg-primary/10 hover:text-primary"
+              onClick={() => scrollToSection('blog')}
+            >
+              Blog
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="w-full justify-start hover:bg-primary/10 hover:text-primary"
+              onClick={() => scrollToSection('experience')}
+            >
+              Experience
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="w-full justify-start hover:bg-primary/10 hover:text-primary"
+              onClick={() => scrollToSection('contact')}
+            >
+              Contact
+            </Button>
           </nav>
         </div>
       )}

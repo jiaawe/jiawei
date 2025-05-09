@@ -4,6 +4,7 @@ import { ArticleList } from "@/components/articles/ArticleList";
 import { ExperienceList } from "@/components/experience/ExperienceList";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { Contact } from "@/components/contact/Contact";
 
 export default function App() {
   return (
@@ -29,6 +30,11 @@ export default function App() {
         
         {/* Work Experience Section */}
         <ExperienceList />
+        
+        <Separator className="bg-primary/10" />
+        
+        {/* Contact Section */}
+        <Contact />
       </main>
       
       <Footer />

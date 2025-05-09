@@ -3,30 +3,30 @@ import type { Experience } from "../types";
 export const experiences: Experience[] = [
   {
     id: 1,
-    company: "Tech Innovations Inc.",
-    role: "Senior Frontend Developer",
-    period: "2023 - Present",
-    description: "Led the frontend team in developing a complex SaaS platform. Implemented modern React practices and improved performance by 40%."
+    company: "TikTok",
+    role: "Machine Learning Engineer Intern (Risk Control)",
+    period: "Jan 2025 - May 2025",
+    description: "Developed real-time address clustering strategies to flag >2500 risky transactions per day. Built real-time address embedding & recall pipelines, processing addresses with >1000 QPS in <110ms."
   },
   {
     id: 2,
-    company: "Digital Solutions Ltd.",
-    role: "Frontend Developer",
-    period: "2020 - 2023",
-    description: "Developed responsive web applications using React and TypeScript. Collaborated with designers to implement pixel-perfect UI components."
+    company: "TikTok",
+    role: "Data Science Intern",
+    period: "May 2024 - Aug 2024",
+    description: "Developed a Retrieval Augmented Generation pipeline to retrieve thousands of videos with >95% accuracy within 3s. Sped up inference speeds of generative models by >30% via open-source frameworks. Researched on dataset distillation methods to reduce training time and costs by >50%."
   },
   {
     id: 3,
-    company: "Creative Web Agency",
-    role: "Junior Developer",
-    period: "2018 - 2020",
-    description: "Assisted in building websites for clients across various industries. Worked with HTML, CSS, and JavaScript."
+    company: "Government Technology Agency (GovTech)",
+    role: "AI Engineer Intern",
+    period: "Jan 2024 - Apr 2024",
+    description: "Researched and developed multimodal machine learning models for video analytics applications. Built processing and training pipelines on AWS to automate data ingestion, model monitoring and retraining."
   },
   {
     id: 4,
-    company: "Startup Ventures",
-    role: "Intern",
-    period: "2017 - 2018",
-    description: "Contributed to frontend development tasks and gained practical experience in web development technologies and agile methodologies."
+    company: "foodpanda",
+    role: "Data Analyst Intern",
+    period: "May 2023 - Dec 2023",
+    description: "Spearheaded an automated quarterly survey sentiment analysis project, saving over 70% manual hours. Pioneered a machine learning project to predict potential voluntary attrition and analysed their factors leading to it."
   }
 ];
